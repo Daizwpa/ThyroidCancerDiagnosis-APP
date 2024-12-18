@@ -1,0 +1,288 @@
+INFO:radiomics.featureextractor: Loading parameter file C:\Users\User\Desktop\ThyroidCancerDiagnosis-APP\settings\radiomics.yaml
+DEBUG:radiomics.featureextractor: Parameters parsed, input is valid.
+DEBUG:radiomics.featureextractor: Applying settings
+DEBUG:radiomics.featureextractor: Enabled image types: {'Original': {}, 'Wavelet': {}}
+DEBUG:radiomics.featureextractor: Enabled features: {'shape2D': None, 'firstorder': [], 'glcm': None, 'glrlm': None, 'glszm': None, 'gldm': None, 'ngtdm': None}
+DEBUG:radiomics.featureextractor: Settings: {'normalize': True, 'normalizeScale': 1, 'label': 255}
+INFO:radiomics.featureextractor: Calculating features with label: 255
+DEBUG:radiomics.featureextractor: Enabled images types: {'Original': {}, 'Wavelet': {}}
+DEBUG:radiomics.featureextractor: Enabled features: {'shape2D': None, 'firstorder': [], 'glcm': None, 'glrlm': None, 'glszm': None, 'gldm': None, 'ngtdm': None}
+DEBUG:radiomics.featureextractor: Current settings: {'minimumROIDimensions': 2, 'minimumROISize': None, 'normalize': True, 'normalizeScale': 1, 'removeOutliers': None, 'resampledPixelSpacing': None, 'interpolator': 'sitkBSpline', 'preCrop': False, 'padDistance': 5, 'distances': [1], 'force2D': False, 'force2Ddimension': 0, 'resegmentRange': None, 'label': 255, 'additionalInfo': True}
+INFO:radiomics.featureextractor: Loading image and mask
+DEBUG:radiomics.imageoperations: Force casting mask to UInt32 to ensure correct datatype.
+DEBUG:radiomics.imageoperations: Normalizing image with scale 1
+DEBUG:radiomics.imageoperations: Checking mask with label 255
+DEBUG:radiomics.imageoperations: Calculating bounding box
+DEBUG:radiomics.imageoperations: Checking minimum number of dimensions requirements (2)
+DEBUG:radiomics.featureextractor: Image and Mask loaded and valid, starting extraction
+DEBUG:radiomics.imageoperations: Cropping to size [126 115]
+INFO:radiomics.featureextractor: Computing shape2D
+DEBUG:radiomics.shape2D: Initializing feature class
+DEBUG:radiomics.shape2D: Padding the mask with 0s
+DEBUG:radiomics.shape2D: Pre-calculate surface, perimeter, diameter and eigenvalues
+DEBUG:radiomics.shape2D: Shape feature class initialized
+DEBUG:radiomics.shape2D: Calculating features
+DEBUG:radiomics.featureextractor: Creating image type iterator
+INFO:radiomics.featureextractor: Adding image type "Original" with custom settings: {}
+INFO:radiomics.featureextractor: Adding image type "Wavelet" with custom settings: {}
+DEBUG:radiomics.featureextractor: Extracting features
+DEBUG:radiomics.imageoperations: Yielding original image
+INFO:radiomics.featureextractor: Calculating features for original image
+DEBUG:radiomics.imageoperations: Cropping to size [126 115]
+INFO:radiomics.featureextractor: Computing firstorder
+DEBUG:radiomics.firstorder: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.firstorder: First order feature class initialized
+DEBUG:radiomics.firstorder: Calculating features
+INFO:radiomics.featureextractor: Computing glcm
+DEBUG:radiomics.glcm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glcm: Calculating GLCM matrix in C
+DEBUG:radiomics.glcm: Process calculated matrix
+DEBUG:radiomics.glcm: Create symmetrical matrix
+DEBUG:radiomics.glcm: No empty angles
+DEBUG:radiomics.glcm: Calculating GLCM coefficients
+DEBUG:radiomics.glcm: GLCM feature class initialized, calculated GLCM with shape (1, 2, 2, 4)
+DEBUG:radiomics.glcm: Calculating features
+WARNING:radiomics.glcm: GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+INFO:radiomics.featureextractor: Computing glrlm
+DEBUG:radiomics.glrlm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glrlm: Calculating GLRLM matrix in C
+DEBUG:radiomics.glrlm: Process calculated matrix
+DEBUG:radiomics.glrlm: No empty angles
+DEBUG:radiomics.glrlm: Calculating GLRLM coefficients
+DEBUG:radiomics.glrlm: GLRLM feature class initialized, calculated GLRLM with shape (1, 2, 86, 4)
+DEBUG:radiomics.glrlm: Calculating features
+INFO:radiomics.featureextractor: Computing glszm
+DEBUG:radiomics.glszm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glszm: Calculating GLSZM matrix in C
+DEBUG:radiomics.glszm: Calculating GLSZM coefficients
+DEBUG:radiomics.glszm: GLSZM feature class initialized, calculated GLSZM with shape (1, 2, 17)
+DEBUG:radiomics.glszm: Calculating features
+INFO:radiomics.featureextractor: Computing gldm
+DEBUG:radiomics.gldm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.gldm: Calculating GLDM matrix in C
+DEBUG:radiomics.gldm: Feature class initialized, calculated GLDM with shape (1, 2, 8)
+DEBUG:radiomics.gldm: Calculating features
+INFO:radiomics.featureextractor: Computing ngtdm
+DEBUG:radiomics.ngtdm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.ngtdm: Calculating features
+DEBUG:radiomics.imageoperations: Generating Wavelet images
+INFO:radiomics.imageoperations: Computing Wavelet LH
+DEBUG:radiomics.imageoperations: Yielding wavelet-LH image
+INFO:radiomics.featureextractor: Calculating features for wavelet-LH image
+DEBUG:radiomics.imageoperations: Cropping to size [126 115]
+INFO:radiomics.featureextractor: Computing firstorder
+DEBUG:radiomics.firstorder: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.firstorder: First order feature class initialized
+DEBUG:radiomics.firstorder: Calculating features
+INFO:radiomics.featureextractor: Computing glcm
+DEBUG:radiomics.glcm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glcm: Calculating GLCM matrix in C
+DEBUG:radiomics.glcm: Process calculated matrix
+DEBUG:radiomics.glcm: Create symmetrical matrix
+DEBUG:radiomics.glcm: No empty angles
+DEBUG:radiomics.glcm: Calculating GLCM coefficients
+DEBUG:radiomics.glcm: GLCM feature class initialized, calculated GLCM with shape (1, 2, 2, 4)
+DEBUG:radiomics.glcm: Calculating features
+WARNING:radiomics.glcm: GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+INFO:radiomics.featureextractor: Computing glrlm
+DEBUG:radiomics.glrlm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glrlm: Calculating GLRLM matrix in C
+DEBUG:radiomics.glrlm: Process calculated matrix
+DEBUG:radiomics.glrlm: No empty angles
+DEBUG:radiomics.glrlm: Calculating GLRLM coefficients
+DEBUG:radiomics.glrlm: GLRLM feature class initialized, calculated GLRLM with shape (1, 2, 45, 4)
+DEBUG:radiomics.glrlm: Calculating features
+INFO:radiomics.featureextractor: Computing glszm
+DEBUG:radiomics.glszm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glszm: Calculating GLSZM matrix in C
+DEBUG:radiomics.glszm: Calculating GLSZM coefficients
+DEBUG:radiomics.glszm: GLSZM feature class initialized, calculated GLSZM with shape (1, 2, 44)
+DEBUG:radiomics.glszm: Calculating features
+INFO:radiomics.featureextractor: Computing gldm
+DEBUG:radiomics.gldm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.gldm: Calculating GLDM matrix in C
+DEBUG:radiomics.gldm: Feature class initialized, calculated GLDM with shape (1, 2, 9)
+DEBUG:radiomics.gldm: Calculating features
+INFO:radiomics.featureextractor: Computing ngtdm
+DEBUG:radiomics.ngtdm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.ngtdm: Calculating features
+INFO:radiomics.imageoperations: Computing Wavelet HL
+DEBUG:radiomics.imageoperations: Yielding wavelet-HL image
+INFO:radiomics.featureextractor: Calculating features for wavelet-HL image
+DEBUG:radiomics.imageoperations: Cropping to size [126 115]
+INFO:radiomics.featureextractor: Computing firstorder
+DEBUG:radiomics.firstorder: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.firstorder: First order feature class initialized
+DEBUG:radiomics.firstorder: Calculating features
+INFO:radiomics.featureextractor: Computing glcm
+DEBUG:radiomics.glcm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glcm: Calculating GLCM matrix in C
+DEBUG:radiomics.glcm: Process calculated matrix
+DEBUG:radiomics.glcm: Create symmetrical matrix
+DEBUG:radiomics.glcm: No empty angles
+DEBUG:radiomics.glcm: Calculating GLCM coefficients
+DEBUG:radiomics.glcm: GLCM feature class initialized, calculated GLCM with shape (1, 2, 2, 4)
+DEBUG:radiomics.glcm: Calculating features
+WARNING:radiomics.glcm: GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+INFO:radiomics.featureextractor: Computing glrlm
+DEBUG:radiomics.glrlm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glrlm: Calculating GLRLM matrix in C
+DEBUG:radiomics.glrlm: Process calculated matrix
+DEBUG:radiomics.glrlm: No empty angles
+DEBUG:radiomics.glrlm: Calculating GLRLM coefficients
+DEBUG:radiomics.glrlm: GLRLM feature class initialized, calculated GLRLM with shape (1, 2, 27, 4)
+DEBUG:radiomics.glrlm: Calculating features
+INFO:radiomics.featureextractor: Computing glszm
+DEBUG:radiomics.glszm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glszm: Calculating GLSZM matrix in C
+DEBUG:radiomics.glszm: Calculating GLSZM coefficients
+DEBUG:radiomics.glszm: GLSZM feature class initialized, calculated GLSZM with shape (1, 2, 25)
+DEBUG:radiomics.glszm: Calculating features
+INFO:radiomics.featureextractor: Computing gldm
+DEBUG:radiomics.gldm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.gldm: Calculating GLDM matrix in C
+DEBUG:radiomics.gldm: Feature class initialized, calculated GLDM with shape (1, 2, 9)
+DEBUG:radiomics.gldm: Calculating features
+INFO:radiomics.featureextractor: Computing ngtdm
+DEBUG:radiomics.ngtdm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.ngtdm: Calculating features
+INFO:radiomics.imageoperations: Computing Wavelet HH
+DEBUG:radiomics.imageoperations: Yielding wavelet-HH image
+INFO:radiomics.featureextractor: Calculating features for wavelet-HH image
+DEBUG:radiomics.imageoperations: Cropping to size [126 115]
+INFO:radiomics.featureextractor: Computing firstorder
+DEBUG:radiomics.firstorder: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.firstorder: First order feature class initialized
+DEBUG:radiomics.firstorder: Calculating features
+INFO:radiomics.featureextractor: Computing glcm
+DEBUG:radiomics.glcm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glcm: Calculating GLCM matrix in C
+DEBUG:radiomics.glcm: Process calculated matrix
+DEBUG:radiomics.glcm: Create symmetrical matrix
+DEBUG:radiomics.glcm: No empty angles
+DEBUG:radiomics.glcm: Calculating GLCM coefficients
+DEBUG:radiomics.glcm: GLCM feature class initialized, calculated GLCM with shape (1, 2, 2, 4)
+DEBUG:radiomics.glcm: Calculating features
+WARNING:radiomics.glcm: GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+INFO:radiomics.featureextractor: Computing glrlm
+DEBUG:radiomics.glrlm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glrlm: Calculating GLRLM matrix in C
+DEBUG:radiomics.glrlm: Process calculated matrix
+DEBUG:radiomics.glrlm: No empty angles
+DEBUG:radiomics.glrlm: Calculating GLRLM coefficients
+DEBUG:radiomics.glrlm: GLRLM feature class initialized, calculated GLRLM with shape (1, 2, 15, 4)
+DEBUG:radiomics.glrlm: Calculating features
+INFO:radiomics.featureextractor: Computing glszm
+DEBUG:radiomics.glszm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glszm: Calculating GLSZM matrix in C
+DEBUG:radiomics.glszm: Calculating GLSZM coefficients
+DEBUG:radiomics.glszm: GLSZM feature class initialized, calculated GLSZM with shape (1, 2, 6)
+DEBUG:radiomics.glszm: Calculating features
+INFO:radiomics.featureextractor: Computing gldm
+DEBUG:radiomics.gldm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.gldm: Calculating GLDM matrix in C
+DEBUG:radiomics.gldm: Feature class initialized, calculated GLDM with shape (1, 2, 9)
+DEBUG:radiomics.gldm: Calculating features
+INFO:radiomics.featureextractor: Computing ngtdm
+DEBUG:radiomics.ngtdm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.ngtdm: Calculating features
+DEBUG:radiomics.imageoperations: Yielding approximation (wavelet-LL) image
+INFO:radiomics.featureextractor: Calculating features for wavelet-LL image
+DEBUG:radiomics.imageoperations: Cropping to size [126 115]
+INFO:radiomics.featureextractor: Computing firstorder
+DEBUG:radiomics.firstorder: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.firstorder: First order feature class initialized
+DEBUG:radiomics.firstorder: Calculating features
+INFO:radiomics.featureextractor: Computing glcm
+DEBUG:radiomics.glcm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glcm: Calculating GLCM matrix in C
+DEBUG:radiomics.glcm: Process calculated matrix
+DEBUG:radiomics.glcm: Create symmetrical matrix
+DEBUG:radiomics.glcm: No empty angles
+DEBUG:radiomics.glcm: Calculating GLCM coefficients
+DEBUG:radiomics.glcm: GLCM feature class initialized, calculated GLCM with shape (1, 2, 2, 4)
+DEBUG:radiomics.glcm: Calculating features
+WARNING:radiomics.glcm: GLCM is symmetrical, therefore Sum Average = 2 * Joint Average, only 1 needs to be calculated
+INFO:radiomics.featureextractor: Computing glrlm
+DEBUG:radiomics.glrlm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glrlm: Calculating GLRLM matrix in C
+DEBUG:radiomics.glrlm: Process calculated matrix
+DEBUG:radiomics.glrlm: No empty angles
+DEBUG:radiomics.glrlm: Calculating GLRLM coefficients
+DEBUG:radiomics.glrlm: GLRLM feature class initialized, calculated GLRLM with shape (1, 2, 86, 4)
+DEBUG:radiomics.glrlm: Calculating features
+INFO:radiomics.featureextractor: Computing glszm
+DEBUG:radiomics.glszm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.glszm: Calculating GLSZM matrix in C
+DEBUG:radiomics.glszm: Calculating GLSZM coefficients
+DEBUG:radiomics.glszm: GLSZM feature class initialized, calculated GLSZM with shape (1, 2, 18)
+DEBUG:radiomics.glszm: Calculating features
+INFO:radiomics.featureextractor: Computing gldm
+DEBUG:radiomics.gldm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.gldm: Calculating GLDM matrix in C
+DEBUG:radiomics.gldm: Feature class initialized, calculated GLDM with shape (1, 2, 9)
+DEBUG:radiomics.gldm: Calculating features
+INFO:radiomics.featureextractor: Computing ngtdm
+DEBUG:radiomics.ngtdm: Initializing feature class
+DEBUG:radiomics.imageoperations: Discretizing gray levels inside ROI
+DEBUG:radiomics.imageoperations: Calculated 3 bins for bin width 25 with edges: [-25.   0.  25.  50.])
+DEBUG:radiomics.ngtdm: Calculating features
+DEBUG:radiomics.featureextractor: Features extracted
