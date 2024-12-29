@@ -9,7 +9,7 @@ from Controller.Classify import Classifier
 
 def Page(dataset: pd.DataFrame = None):
     st.header(" Classification tumour:", divider='rainbow')
-    st.markdown("### Input Ultrasound iamge and Mask:")
+    st.markdown("### Input Ultrasound Image and Mask:")
     col1, col2, = st.columns(2)
 
     with col1:
